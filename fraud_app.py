@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import joblib as jb
 
 st.title("Fraud Detection App - Testing")
 # Load the trained model
 try:
-    model = joblib.load('fraud_model.pkl')
+    model = jb.load('fraud_model.pkl')
 except FileNotFoundError:
     st.error("Error: 'fraud_model.pkl' not found. Make sure the model file is in the same directory as this script.")
     st.stop()
